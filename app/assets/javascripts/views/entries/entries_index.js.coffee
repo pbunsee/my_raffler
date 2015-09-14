@@ -5,7 +5,8 @@ class Raffler.Views.EntriesIndex extends Backbone.View
   initialize: ->
     console.log("@collection in view for entries initialize")
     console.dir(@collection)
-    @collection.on('reset', @render, this)
+    # @collection.on('reset', @render, this)
+    @collection.on('sync', @render, this)
 
   render: ->
     console.log("@collection in view for entries render")
