@@ -5,7 +5,7 @@ class Raffler.Routers.Entries extends Backbone.Router
 
   initialize: ->
     @collection = new Raffler.Collections.Entries()
-    @collection.fetch()
+    @collection.fetch({reset: true})
     console.log("@collection in router for entries initialize")
     console.dir(@collection)
 
